@@ -40,6 +40,7 @@
 ## 参考
 
 * [Notification System Design](https://cloudificationzone.com/2021/08/13/notification-system-design/)
+<img src="docs/deep-dive/architecture.png">
 
 
 

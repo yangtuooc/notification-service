@@ -31,6 +31,7 @@
     <module>notification-analytics-service</module>
     <module>external-modules-service</module>
     <module>notification-core</module>
+    <module>notification-standalone</module>
   </modules>
 
   <dependencyManagement>
