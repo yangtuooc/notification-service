@@ -26,7 +26,9 @@
 * 可扩展/可插拔设计：可添加更多客户端、适配器和供应商
 * 可靠性：消息不会丢失、重复或无序
 
+## 参考
 
+* [Notification System Design](https://cloudificationzone.com/2021/08/13/notification-system-design/)
 
 
 
