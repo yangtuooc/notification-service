@@ -2,6 +2,7 @@ package cn.haloop.ns.service;
 
 import cn.haloop.ns.domain.NotificationTemplate;
 import cn.haloop.ns.repository.NotificationTemplateRepository;
+import java.util.List;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,8 @@ public class NotificationTemplateService {
     return repo.save(template);
   }
 
-  public NotificationTemplate updateTemplate(NotificationTemplate template) {
+  public NotificationTemplate updateTemplate(NotificationTemplate template, NotificationTemplate newTemplate) {
+    template.update(newTemplate);
     return repo.save(template);
   }
 
@@ -28,4 +30,7 @@ public class NotificationTemplateService {
     repo.deleteById(templateId);
   }
 
+  public List<NotificationTemplate> getAllTemplates() {
+    return repo.findAll();
+  }
 }
