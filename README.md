@@ -37,10 +37,15 @@
 * notification-outbound-service: 处理出站的通知，从其他模块接收通知，然后调度给相应的适配器发送
 * notification-template-service: 负责管理通知的模板
 
+## FAQ
+
+1. 模块之间如何进行调用？
+    * 模块之间的服务不直接依赖，而是在服务调用方增加一个[防腐层]()以解耦模块之间的依赖关系，也为后续的微服务化做好准备。
+
 ## 参考
 
 * [Notification System Design](https://cloudificationzone.com/2021/08/13/notification-system-design/)
-<img src="docs/deep-dive/architecture.png">
+  <img src="docs/deep-dive/architecture.png">
 
 
 
