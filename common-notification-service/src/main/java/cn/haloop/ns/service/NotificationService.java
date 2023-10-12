@@ -4,7 +4,7 @@ import cn.haloop.ns.domain.model.Notification;
 import cn.haloop.ns.domain.service.PrioritizationService;
 import cn.haloop.ns.domain.service.SchedulingService;
 import cn.haloop.ns.domain.service.ValidationService;
-import cn.haloop.ns.dto.NotificationRequest;
+import cn.haloop.ns.dto.AbstractNotificationRequest;
 import cn.haloop.ns.repository.NotificationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public class NotificationService {
   private final NotificationRepository notificationRepository;
 
 
-  public Notification createNotification(NotificationRequest request) {
+  public Notification createNotification(AbstractNotificationRequest request) {
     Notification notification = request.asNotification();
     validationService.validate(notification);
     prioritizationService.setPriority(notification);

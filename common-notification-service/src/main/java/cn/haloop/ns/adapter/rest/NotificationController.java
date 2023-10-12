@@ -2,7 +2,7 @@ package cn.haloop.ns.adapter.rest;
 
 import cn.haloop.ns.domain.model.Notification;
 import cn.haloop.ns.domain.model.NotificationStatus;
-import cn.haloop.ns.dto.NotificationRequest;
+import cn.haloop.ns.dto.AbstractNotificationRequest;
 import cn.haloop.ns.service.NotificationService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -29,7 +29,7 @@ public class NotificationController {
       operationId = "createNotification"
   )
   @PostMapping
-  public ResponseEntity<Notification> createNotification(@RequestBody NotificationRequest request) {
+  public ResponseEntity<Notification> createNotification(@RequestBody AbstractNotificationRequest request) {
     return ResponseEntity.ok(svc.createNotification(request));
   }
 
