@@ -26,6 +26,17 @@
 * 可扩展/可插拔设计：可添加更多客户端、适配器和供应商
 * 可靠性：消息不会丢失、重复或无序
 
+## 模块划分
+
+* common-notification-service: 提供通用的通知服务，如验证、优先级设定等
+* external-modules-service: 理与第三方系统的集成，如SMS供应商、Email供应商等
+* notification-analytics-service: 提供通知的统计和分析功能
+* notification-broadcast-service: 负责广播通知给各种适配器，如SMS、Email等
+* notification-core: 包含通用实体、工具类、常量等
+* notification-inbound-service: 处理入站的通知，如外部系统的回应或反馈
+* notification-outbound-service: 处理出站的通知，从其他模块接收通知，然后调度给相应的适配器发送
+* notification-template-service: 负责管理通知的模板
+
 ## 参考
 
 * [Notification System Design](https://cloudificationzone.com/2021/08/13/notification-system-design/)
