@@ -1,5 +1,6 @@
 package cn.haloop.ns.dto;
 
+import cn.haloop.ns.domain.model.Notification;
 import cn.haloop.ns.domain.model.NotificationType;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -33,6 +34,8 @@ public abstract class AbstractNotificationRequest {
   private String content;
 
   protected abstract void execute();
+
+  public abstract Notification asNotification();
 
   public void validate() {
     if (type == null) {
